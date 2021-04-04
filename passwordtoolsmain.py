@@ -1,12 +1,9 @@
 from tkinter import Tk, Button, Frame, Label, LabelFrame, OptionMenu, Checkbutton, StringVar, IntVar, Entry
-import random
-
-def do_nothing():
-    return
+import generator
 
 def main():
-    def genpass():
-        print(pass_length.selection_get())
+    def genpress():
+        print("Submit attempted")
 
     # Initialise root
     root = Tk()
@@ -40,7 +37,8 @@ def main():
     pass_length.grid(row=1,column=0)
     # Create 'Generate' button
     generator_button = Button(generator_labelframe,
-                                text="Generate!")
+                                text="Generate!",
+                                command=lambda: genpress())
     generator_button.grid(row=2,column=0,rowspan="2")
     # Creating the three checkboxes
     s_var = IntVar()
